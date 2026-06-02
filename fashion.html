@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(244, 243, 243);
+        }
+
+        /* NAVBAR */
+
+        nav {
+            position: sticky;
+            top: 0px;
+            background-color: rgb(219, 188, 247);
+            padding: 20px;
+        }
+
+        .logo {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .logo img {
+            width: 40px;
+            vertical-align: middle;
+        }
+
+        h2 {
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        ul {
+            display: inline-block;
+            margin-left: 670px;
+            vertical-align: middle;
+        }
+
+        li {
+            display: inline;
+            margin: 30px;
+            font-size: 18px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        li a:hover {
+            color: white;
+        }
+
+        .icons {
+            display: inline-block;
+            margin-left: 40px;
+        }
+
+        .icons img {
+            width: 25px;
+            margin-left: 20px;
+            vertical-align: middle;
+        }
+
+        /* HERO */
+
+        .hero {
+            background-color: rgb(238, 223, 228);
+            text-align: center;
+            padding: 50px;
+            margin: 30px;
+            border-radius: 15px;
+        }
+
+        .hero img {
+            width: 100%;
+            height: 300px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            color: rgb(120, 50, 120);
+        }
+
+        .hero p {
+            font-size: 22px;
+            margin-top: 20px;
+            color: grey;
+        }
+
+        .hero button {
+            margin-top: 30px;
+            padding: 15px 35px;
+            border: none;
+            background-color: rgb(219, 188, 247);
+            color: black;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+
+        button:hover {
+            background-color: purple;
+            color: white;
+        }
+
+        /* CATEGORY */
+
+        .category {
+            width: 90%;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        .category h1 {
+            margin-bottom: 20px;
+        }
+
+        .card {
+            width: 30%;
+            display: inline-block;
+            background-color: rgb(207, 203, 203);
+            margin: 10px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        .card h2 {
+            padding: 10px;
+        }
+
+        /* PRODUCTS */
+
+        .products {
+            width: 90%;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        .products h1 {
+            margin-bottom: 20px;
+        }
+
+        .product {
+            width: 22%;
+            display: inline-block;
+            background-color: rgb(207, 203, 203);
+            margin: 10px;
+            text-align: center;
+            padding-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .product img {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+        }
+
+        .product h3 {
+            margin-top: 10px;
+            font-size: 28px;
+        }
+
+        .product p {
+            color: purple;
+            margin-top: 10px;
+        }
+
+        /* OFFERS */
+
+        .offers {
+            width: 90%;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        .offer {
+            width: 30%;
+            display: inline-block;
+            position: relative;
+            margin: 10px;
+        }
+
+        .offer img {
+            width: 100%;
+            height: 250px;
+            border-radius: 10px;
+        }
+
+        .offer-text {
+            position: absolute;
+            top: 40%;
+            left: 20%;
+            color: white;
+            text-align: center;
+        }
+
+        .offer-text h2 {
+            font-size: 35px;
+        }
+
+        .offer-text button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        /* SUBSCRIBE */
+
+        .subscribe {
+            width: 90%;
+            margin: auto;
+            margin-top: 40px;
+            background-color: rgb(219, 188, 247);
+            padding: 60px;
+            text-align: center;
+            color: rgb(71, 54, 90);
+            border-radius: 10px;
+        }
+
+        .subscribe h1 {
+            color: rgb(80, 40, 100);
+            margin-bottom: 20px;
+            font-size: 40px;
+        }
+
+        .subscribe input {
+            padding: 15px;
+            width: 300px;
+            background-color: rgb(243, 235, 225);
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+
+        .subscribe button {
+            padding: 15px 25px;
+            border: none;
+            border-radius: 8px;
+            background-color: rgb(120, 50, 120);
+            color: white;
+            font-size: 16px;
+        }
+
+        /* SERVICES */
+
+        .services {
+            width: 90%;
+            margin: auto;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .service {
+            width: 28%;
+            display: inline-block;
+            background-color: rgb(240, 219, 219);
+            padding: 30px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .service img {
+            display: block;
+            margin: auto;
+            width: 70px;
+            margin-bottom: 15px;
+        }
+
+        .service h2 {
+            margin-top: 10px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background-color: rgb(201, 187, 216);
+            margin-top: 40px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        footer img {
+            width: 35px;
+            margin: 10px;
+        }
+
+        .whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: white;
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        .whatsapp img {
+            width: 50px;
+        }
+    </style>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/1785/1785375.png">
+            <h2>Fashions</h2>
+        </div>
+
+        <ul>
+            <li><a href="fashion.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Signup</a></li>
+            <li><a href="https://kafka.kalasalingam.ac.in/">Contact</a></li>
+
+        </ul>
+
+        <div class="icons">
+
+            <a href="">
+                <img src="https://cdn-icons-png.flaticon.com/512/54/54481.png">
+            </a>
+
+            <a href="">
+                <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png">
+            </a>
+
+            <a href="">
+                <img src="https://cdn-icons-png.flaticon.com/512/2838/2838895.png">
+            </a>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO -->
+
+    <div class="hero">
+
+        <img
+            src="https://images.unsplash.com/photo-1445205170230-053b83016050?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+        <h1>Discover your style</h1>
+
+        <p>
+            Trendy outfits for every occasion.<br>
+            Feel confident. Look beautiful.
+        </p>
+
+        <button><a href="https://code.visualstudio.com/docs/editing/codebasics">Shop Now</a></button>
+
+    </div>
+
+    <!-- CATEGORY -->
+
+    <div class="category">
+
+        <h1>Shop by Category</h1>
+
+        <div class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+
+            <h2>Tops</h2>
+
+        </div>
+
+        <div class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx2aXN1YWwtc2VhcmNofDF8fHxlbnwwfHx8fHw%3DU">
+
+            <h2>Bottoms</h2>
+
+        </div>
+
+        <div class="card">
+
+            <img
+                src="https://images.unsplash.com/photo-1776256747953-c5e5835a65f7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8b3V0ZXJ3ZWFyfGVufDB8fDB8fHww">
+
+            <h2>Outerwear</h2>
+
+        </div>
+
+    </div>
+
+    <!-- PRODUCTS -->
+
+    <div class="products">
+
+        <h1>Featured Styles</h1>
+
+        <div class="product">
+
+            <img
+                src="https://images.unsplash.com/photo-1621072156002-e2fccdc0b176?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNoaXJ0fGVufDB8fDB8fHww">
+
+            <h3>The Classic Shirt</h3>
+
+            <p>$100</p>
+
+        </div>
+
+        <div class="product">
+
+            <img
+                src="https://plus.unsplash.com/premium_photo-1665664652383-2308d742943c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fGRlbmltJTIwamVhbnN8ZW58MHx8MHx8fDA%3D">
+
+            <h3>Denim Jeans</h3>
+
+            <p>$120</p>
+
+        </div>
+
+        <div class="product">
+
+            <img
+                src="https://plus.unsplash.com/premium_photo-1673827311290-d435f481152e?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aG9vZGllfGVufDB8fDB8fHww">
+
+            <h3>Hoodie</h3>
+
+            <p>$150</p>
+
+        </div>
+
+        <div class="product">
+
+            <img
+                src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHx2aXN1YWwtc2VhcmNofDF8fHxlbnwwfHx8fHw%3D">
+
+            <h3>Beach Dresses</h3>
+
+            <p>$110</p>
+
+        </div>
+
+    </div>
+
+    <!-- OFFERS -->
+
+    <div class="offers">
+
+        <div class="offer">
+
+            <img
+                src="https://media.istockphoto.com/id/1613314010/photo/young-woman-in-a-stylish-summer-dress-enjoys-the-beauty-of-a-tropical-resort.jpg?s=612x612&w=0&k=20&c=OPDxk_eJF3nSc94xmCQgjsXjIlZ2MWhdP5zGxXGZ5aU=">
+            <div class="offer-text">
+
+                <h2>New Arrivals</h2>
+
+                <button><a href="https://en.wikipedia.org/wiki/Vercel">Shop</a></button>
+
+            </div>
+
+        </div>
+
+        <div class="offer">
+
+            <img
+                src="https://images.unsplash.com/photo-1627511306341-f9d96646b91d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGRyZXNzZXN8ZW58MHx8MHx8fDA%3D">
+
+            <div class="offer-text">
+
+                <h2>Best Sellers</h2>
+
+                <button><a href="https://github.com/vercel">Shop</a></button>
+
+            </div>
+
+        </div>
+
+        <div class="offer">
+
+            <img
+                src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZmFzaGlvbnxlbnwwfHwwfHx8MA%3D%3D">
+
+            <div class="offer-text">
+
+                <h2>Outfits</h2>
+
+                <button><a href="https://vercel.com/keerthanas-projects-74813ae5/css">Shop</a></button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- SUBSCRIBE -->
+
+    <div class="subscribe">
+
+        <h1>Join Our Community</h1>
+
+        <p>Subscribe for latest fashion updates and offers</p><br>
+
+        <input type="email" placeholder="Enter Email">
+
+        <button>Subscribe</button>
+
+    </div>
+
+    <!-- SERVICES -->
+
+    <div class="services">
+
+        <div class="service">
+
+            <img src="https://cdn-icons-png.flaticon.com/128/11153/11153363.png">
+            <h2>Easy Returns</h2>
+
+        </div>
+
+        <div class="service">
+
+            <img src="https://cdn-icons-png.flaticon.com/128/2059/2059129.png">
+            <h2>Secure Payments</h2>
+
+        </div>
+
+        <div class="service">
+
+            <img src="https://cdn-icons-png.flaticon.com/128/9402/9402112.png">
+            <h2>Reliable Delivery</h2>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png">
+        <p>© 2025 Fashion Store. All Rights Reserved.</p>
+
+    </footer>
+
+    <a href="https://wa.me/8072498972" class="whatsapp">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+
+    </a>
+</body>
+
+</html>
